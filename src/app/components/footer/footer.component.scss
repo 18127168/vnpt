@@ -1,0 +1,35 @@
+@import '../../../style/package.css';
+@import '../../../style/style.css';
+
+.floating-bottom-area {
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+    right: 15px;
+    bottom: 15px;
+}
+
+.contact-area {
+    width: 70px;
+    height:70px;
+    position: absolute;
+    transform: scaleX(-1);
+}
+  
+.btn-contact,
+.btn-contact:focus {
+    padding: 13px;
+    border-radius: 23px;
+    background-color: #019aff;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.btn-advise {
+    color: #666;
+    background-color: transparent;
+    font-size: 16px;
+    font-family: SanFranciscoDisplay-Light;
+    border: none;
+}

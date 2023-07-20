@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+td {
+    width: 200px;
+    border: 1px solid rgb(37, 37, 37) !important;
+    text-align: center;
+    align-items: center;
+}
+
+.btn-register {
+    background: #ED0677 !important;
+    color: #fff !important;
+    border-radius: 100px !important;
+}

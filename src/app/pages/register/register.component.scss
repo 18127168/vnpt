@@ -1,0 +1,26 @@
+.title-preview-reg-fiber {
+    color: #ed0677;
+    font-size: 22px;
+    padding: 0 10px;
+    text-align: center;
+    margin: 10px 0;
+    text-transform: uppercase;
+    border-bottom: #ccc 1px solid;
+}
+
+.form-reg-fiber {
+    background: #FFFFFF;
+    margin: 30px;
+    padding-bottom: 20px;
+    border: 1px solid rgb(219, 219, 219);
+}
+
+.preview-reg-fiber {
+    background: #FFFFFF;
+    padding: 10px;
+    margin: 30px;
+    border-radius: 5px;
+    border: 1px solid rgb(219, 219, 219);
+}
+
+select:invalid { color: gray; }

@@ -1,0 +1,251 @@
+<div class="main-content">
+    <div class="container mar-top-bottom-20">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="form-reg-fiber pad-20">
+                    <div class="alert alert-success"
+                        style="background: #ed0677!important; color: #fff !important; border-radius: 0px !important;padding: 10px;border: 1px #ed0677 solid;">
+                        <strong>Thông tin đăng ký gói cước</strong>
+                    </div>
+                    <form class="form" [formGroup]="FormData">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <span
+                                    style="font-weight: bold; margin-left: 40px; font-size: 15px; margin-bottom: 20px">Thông
+                                    tin liên hệ lắp đặt dịch vụ </span>
+                            </div>
+                        </div>
+                        <div class="row my-3">
+                            <div class="col-lg-12">
+                                <div class="row my-1">
+                                    <div class="col-lg-2"></div>
+                                    <div class="col-lg-8">
+                                        <label>Tên khách hàng <span style="color: red">(*)</span></label>
+                                        <div>
+                                            <input class="form-control" 
+                                                formControlName="customerName"
+                                                maxlength="255"
+                                                placeholder="Họ và tên khách hàng lắp đặt"
+                                                type="text">
+                                        </div>
+                                        <div *ngIf="formData.customerName.errors?.['required'] && (formData.customerName.dirty || formData.customerName.touched)">
+                                            <span class="text-danger"> * Tên bắt buộc nhập </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2"></div>
+                                </div>
+
+                                <div class="row my-1">
+                                    <div class="col-lg-2"></div>
+                                    <div class="col-lg-8">
+                                        <label>Tỉnh/Thành Phố <span style="color: red">(*)</span></label>
+                                        <div>
+                                            <select class="form-select" formControlName="province" required>
+                                                <option value="" disabled selected hidden>Tỉnh/Thành phố</option>
+                                                <option value="Hà Nội">Thành phố Hà Nội</option>
+                                                <option value="Hải Phòng">Thành phố Hải Phòng</option>
+                                                <option value="Đà Nẵng">Thành phố Đà Nẵng</option>
+                                                <option value="Tp.Hồ Chí Minh">Thành phố Hồ Chí Minh</option>
+                                                <option value="Cần Thơ">Thành phố Cần Thơ</option>
+                                                <option value="Hà Giang">Tỉnh Hà Giang</option>
+                                                <option value="Cao Bằng">Tỉnh Cao Bằng</option>
+                                                <option value="Bắc Kạn">Tỉnh Bắc Kạn</option>
+                                                <option value="Tuyên Quang">Tỉnh Tuyên Quang</option>
+                                                <option value="Lào Cai">Tỉnh Lào Cai</option>
+                                                <option value="Điện Biên">Tỉnh Điện Biên</option>
+                                                <option value="Lai Châu">Tỉnh Lai Châu</option>
+                                                <option value="Sơn La">Tỉnh Sơn La</option>
+                                                <option value="Yên Bái">Tỉnh Yên Bái</option>
+                                                <option value="Hoà Bình">Tỉnh Hoà Bình</option>
+                                                <option value="Thái Nguyên">Tỉnh Thái Nguyên</option>
+                                                <option value="Lạng Sơn">Tỉnh Lạng Sơn</option>
+                                                <option value="Quảng Ninh">Tỉnh Quảng Ninh</option>
+                                                <option value="Bắc Giang">Tỉnh Bắc Giang</option>
+                                                <option value="Phú Thọ">Tỉnh Phú Thọ</option>
+                                                <option value="Vĩnh Phúc">Tỉnh Vĩnh Phúc</option>
+                                                <option value="Bắc Ninh">Tỉnh Bắc Ninh</option>
+                                                <option value="Hải Dương">Tỉnh Hải Dương</option>
+                                                <option value="Hưng Yên">Tỉnh Hưng Yên</option>
+                                                <option value="Thái Bình">Tỉnh Thái Bình</option>
+                                                <option value="Hà Nam">Tỉnh Hà Nam</option>
+                                                <option value="Nam Định">Tỉnh Nam Định</option>
+                                                <option value="Ninh Bình">Tỉnh Ninh Bình</option>
+                                                <option value="Thanh Hóa">Tỉnh Thanh Hóa</option>
+                                                <option value="Nghệ An">Tỉnh Nghệ An</option>
+                                                <option value="Hà Tĩnh">Tỉnh Hà Tĩnh</option>
+                                                <option value="Quảng Bình">Tỉnh Quảng Bình</option>
+                                                <option value="Quảng Trị">Tỉnh Quảng Trị</option>
+                                                <option value="Thừa Thiên Huế">Tỉnh Thừa Thiên Huế</option>
+                                                <option value="Quảng Nam">Tỉnh Quảng Nam</option>
+                                                <option value="Quảng Ngãi">Tỉnh Quảng Ngãi</option>
+                                                <option value="Bình Định">Tỉnh Bình Định</option>
+                                                <option value="Phú Yên">Tỉnh Phú Yên</option>
+                                                <option value="Khánh Hòa">Tỉnh Khánh Hòa</option>
+                                                <option value="Ninh Thuận">Tỉnh Ninh Thuận</option>
+                                                <option value="Bình Thuận">Tỉnh Bình Thuận</option>
+                                                <option value="Kon Tum">Tỉnh Kon Tum</option>
+                                                <option value="Gia Lai">Tỉnh Gia Lai</option>
+                                                <option value="Đắk Lắk">Tỉnh Đắk Lắk</option>
+                                                <option value="Đắk Nông">Tỉnh Đắk Nông</option>
+                                                <option value="Lâm Đồng">Tỉnh Lâm Đồng</option>
+                                                <option value="Bình Phước">Tỉnh Bình Phước</option>
+                                                <option value="Tây Ninh">Tỉnh Tây Ninh</option>
+                                                <option value="Bình Dương">Tỉnh Bình Dương</option>
+                                                <option value="Đồng Nai">Tỉnh Đồng Nai</option>
+                                                <option value="Bà Rịa - Vũng Tàu">Tỉnh Bà Rịa - Vũng Tàu</option>
+                                                <option value="Long An">Tỉnh Long An</option>
+                                                <option value="Tiền Giang">Tỉnh Tiền Giang</option>
+                                                <option value="Bến Tre">Tỉnh Bến Tre</option>
+                                                <option value="Trà Vinh">Tỉnh Trà Vinh</option>
+                                                <option value="Vĩnh Long">Tỉnh Vĩnh Long</option>
+                                                <option value="Đồng Tháp">Tỉnh Đồng Tháp</option>
+                                                <option value="An Giang">Tỉnh An Giang</option>
+                                                <option value="Kiên Giang">Tỉnh Kiên Giang</option>
+                                                <option value="Hậu Giang">Tỉnh Hậu Giang</option>
+                                                <option value="Sóc Trăng">Tỉnh Sóc Trăng</option>
+                                                <option value="Bạc Liêu">Tỉnh Bạc Liêu</option>
+                                                <option value="Cà Mau">Tỉnh Cà Mau</option>
+                                            </select>
+                                        </div>
+                                        <div *ngIf="formData.province.errors?.['required'] && (formData.province.dirty || formData.province.touched)">
+                                            <span class="text-danger"> * Tỉnh/Thành Phố bắt buộc nhập </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2"></div>
+                                </div>
+
+                                <div class="row my-1">
+                                    <div class="col-lg-2"></div>
+                                    <div class="col-lg-8">
+                                        <div class="row">
+                                            <label> Quận/Huyện <span style="color: red">(*)</span></label>
+                                            <div>
+                                                <input class="form-control" 
+                                                    formControlName="district"
+                                                    maxlength="255" 
+                                                    placeholder="Quận/Huyện"
+                                                    type="text">
+                                            </div>
+                                            <div *ngIf="formData.district.errors?.['required'] && (formData.district.dirty || formData.district.touched)">
+                                                <span class="text-danger"> * Quận/Huyện bắt buộc nhập </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row my-1">
+                                    <div class="col-lg-2"></div>
+                                    <div class="col-lg-8">
+                                        <label> Phường/Ấp </label>
+                                        <div>
+                                            <input class="form-control" 
+                                                formControlName="ward"
+                                                maxlength="255" 
+                                                placeholder="Phường/Ấp"
+                                                type="text">
+                                        </div>
+                                        <div *ngIf="formData.ward.errors?.['required'] && (formData.ward.dirty || formData.ward.touched)">
+                                            <span class="text-danger"> * Phường/Ấp bắt buộc nhập </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2"></div>
+                                </div>
+
+                                <div class="row my-1">
+                                    <div class="col-lg-2"></div>
+                                    <div class="col-lg-8">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <label>Địa chỉ nhà <span style="color: red">(*)</span></label>
+                                                <input class="form-control" 
+                                                    formControlName="address"
+                                                    maxlength="255" 
+                                                    placeholder="Địa chỉ nhà"
+                                                    type="text">
+                                            </div>
+                                        </div>
+                                        <div *ngIf="formData.address.errors?.['required'] && (formData.address.dirty || formData.address.touched)">
+                                            <span class="text-danger"> * Địa chỉ nhà bắt buộc nhập </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row my-1">
+                                    <div class="col-lg-2"></div>
+                                    <div class="col-lg-8">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <label>Số điện thoại <span style="color: red">(*)</span></label>
+                                                <input class="form-control"
+                                                    formControlName="phoneNumber"
+                                                    maxlength="255" 
+                                                    placeholder="Số điện thoại" 
+                                                    type="text">
+                                            </div>
+                                            <div *ngIf="formData.phoneNumber.errors?.['required'] && (formData.phoneNumber.dirty || formData.phoneNumber.touched)">
+                                                <span class="text-danger"> * Số điện thoại bắt buộc nhập </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-2 custom-label"></div>
+                            <div class="col-lg-8" style="font-weight: bold;">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <label class="label_text" for="">Thông tin người giới thiệu</label>
+                                        <input class="form-control"
+                                            formControlName="introducer"
+                                            type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-lg-12" style="text-align: center">
+                                <button class="btn btn-register" type="button" (click)="submit()"
+                                    style="background: #ed0677 !important; color: #fff; margin-top: 20px">Đăng ký
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-4" id="keeprelative">
+                <div id="keepposition" style="position: relative; top: auto; width: 375px;">
+                    <div class="preview-reg-fiber pad-20">
+                        <div class="title-preview-reg-fiber">
+                            Thông tin đơn hàng
+                        </div>
+                        <div class="row" style="font-weight: bold; font-size: 12px; margin-bottom: 10px">
+                            <div class="col-lg-6">Tên gói :</div>
+                            <div class="col-lg-6">
+                                <div id="packagepreview" [innerText]="data[this.id].title">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="font-weight: bold; font-size: 12px; margin-bottom: 10px">
+                            <div class="col-lg-6">Giá gói :</div>
+                            <div class="col-lg-6">
+                                <div id="packagepreview" [innerText]="data[this.id].price">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="font-weight: bold; font-size: 12px; margin-bottom: 10px">
+                            <div class="col-lg-6">Hình thức thanh toán :</div>
+                            <div class="col-lg-6">
+                                <div>COD</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

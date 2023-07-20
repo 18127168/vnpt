@@ -1,0 +1,21 @@
+<div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+        <div class="modal-header">
+            <div class="float-right">
+                <button type="button" class="btn btn-close" (click)="closeDialog()" tabindex="-1"></button>
+            </div>
+            <h2 class="modal-title" [innerHTML]="data[this.id].title"></h2>
+        </div>
+        <div class="modal-body">
+            <div class="description-item-fiber" [innerHTML]="data[this.id].body">
+            </div>
+        </div>
+        <div class="modal-footer" style="text-align: center">
+            <button type="button" class="btn btn-back" (click)="closeDialog()">Quay lại</button>
+            <a href="/register?id={{this.id}}" style="padding: 10px"
+                class="btn btn-register">
+                Đăng ký </a>
+        </div>
+    </div>
+  </div>`
