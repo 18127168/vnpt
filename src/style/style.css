@@ -171,8 +171,10 @@ label input[type="radio"] {
 }
 
 .no_pad_left {
-    padding-left: 0;
-    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 15px;
 }
 
 .line_through {
@@ -1559,11 +1561,35 @@ ul.form-group-radio li {
 }
 
 .package_info .thumbnail {
-    border: none
+    border: none;
+    display: flex;
+    justify-content: center;
 }
 
 .package_info .thumbnail img {
     max-width: 100%
+}
+
+@media screen and (max-width: 768px) {
+    .package_info .thumbnail img {
+        width: 70%
+    }
+
+    .package_info .title {
+        display: flex;
+        justify-content: center;
+    }
+
+    .package_info .row_btn {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .package_info .thumbnail img {
+        width: 50%
+    }
 }
 
 .package_info .title {
@@ -2371,8 +2397,7 @@ ul.form-group-radio li {
         padding: 0
     }
     .no_pad_left_xs {
-        padding-left: 0px;
-        padding-right: 30px;
+        padding-right: 5px;
     }
     .no_pad_right_xs {
         padding-right: 0
@@ -2581,9 +2606,6 @@ ul.form-group-radio li {
     }
     .list_package .item {
         margin-bottom: 15px
-    }
-    .package_info .no_pad_left {
-        padding-left: 15px;
     }
     .package_info .row_btn {
         text-align: center
@@ -3327,9 +3349,9 @@ input[type="checkbox"]:checked~a .panel-heading .checked_sight:before {
         width: 108px;
         margin: 3px 0 0 10px
     }
-    #footer {
+    /* #footer {
         display: none
-    }
+    } */
     .title-head-search {
         display: block
     }

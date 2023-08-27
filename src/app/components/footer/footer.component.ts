@@ -8,6 +8,8 @@ import Swal from 'sweetalert2';
 })
 export class FooterComponent {
   
+  phone: string = "0933337617";
+
   /**
    * This method displays a simple success message to the user
    * @param title
@@ -19,7 +21,7 @@ export class FooterComponent {
 
     return Swal.fire({
       title: "Thông tin liên hệ",
-      html: "Số điện thoại và Zalo nhân viên: <br> <h3>0933337617</h3>",
+      html: `Số điện thoại và Zalo nhân viên: <br> <h3>${this.phone}</h3>`,
       showCloseButton: true
     })
   }

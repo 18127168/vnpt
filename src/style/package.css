@@ -266,7 +266,9 @@
 }
 
 .package_freedoo .title,.package_other .title {
+    min-height: 90px;
     padding-bottom: 10px
+    
 }
 
 .package_freedoo .title h3,
@@ -606,7 +608,8 @@
     width: 100%;
     max-width: 290px;
     height: 200px;
-    margin-top: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .description-item-fiber {

@@ -30,7 +30,8 @@
               "src/assets",
               "src/images",
               "src/themes",
-              "src/uploads"
+              "src/uploads",
+              "src/web.config"
             ],
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
@@ -49,12 +50,12 @@
                 {
                   "type": "initial",
                   "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "100kb",
+                  "maximumError": "100kb"
                 }
               ],
               "outputHashing": "all"

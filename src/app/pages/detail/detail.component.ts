@@ -1,4 +1,4 @@
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component } from '@angular/core';
 
 @Component({
@@ -9,7 +9,8 @@ import { Component } from '@angular/core';
 export class DetailComponent {
 
   constructor(
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   id: number = 0;
@@ -953,5 +954,14 @@ export class DetailComponent {
     );
   }
 
+  gotoRegister(event: any, index: number) {
+    event.stopPropagation();
+    event.preventDefault();
 
+    this.router.navigate([`/register`], { 
+        queryParams: { 
+            id: index 
+        }
+    });
+  }
 }

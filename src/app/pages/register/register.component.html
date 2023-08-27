@@ -1,7 +1,7 @@
 <div class="main-content">
     <div class="container mar-top-bottom-20">
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-8 order-2 order-md-1">
                 <div class="form-reg-fiber pad-20">
                     <div class="alert alert-success"
                         style="background: #ed0677!important; color: #fff !important; border-radius: 0px !important;padding: 10px;border: 1px #ed0677 solid;">
@@ -196,9 +196,9 @@
                             <div class="col-lg-8" style="font-weight: bold;">
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <label class="label_text" for="">Thông tin người giới thiệu</label>
+                                        <label class="label_text" for="">Nội dung cần đăng ký</label>
                                         <input class="form-control"
-                                            formControlName="introducer"
+                                            formControlName="note"
                                             type="text">
                                     </div>
                                 </div>
@@ -216,22 +216,22 @@
                     </form>
                 </div>
             </div>
-            <div class="col-lg-4" id="keeprelative">
+            <div class="col-lg-4 order-1 order-md-2" id="keeprelative">
                 <div id="keepposition" style="position: relative; top: auto; width: 375px;">
                     <div class="preview-reg-fiber pad-20">
                         <div class="title-preview-reg-fiber">
                             Thông tin đơn hàng
                         </div>
                         <div class="row" style="font-weight: bold; font-size: 12px; margin-bottom: 10px">
-                            <div class="col-lg-6">Tên gói :</div>
-                            <div class="col-lg-6">
+                            <div class="col-6">Tên gói :</div>
+                            <div class="col-6">
                                 <div id="packagepreview" [innerText]="data[this.id].title">
                                 </div>
                             </div>
                         </div>
                         <div class="row" style="font-weight: bold; font-size: 12px; margin-bottom: 10px">
-                            <div class="col-lg-6">Giá gói :</div>
-                            <div class="col-lg-6">
+                            <div class="col-6">Giá gói :</div>
+                            <div class="col-6">
                                 <div id="packagepreview" [innerText]="data[this.id].price">
                                 </div>
                             </div>
@@ -248,4 +248,3 @@
         </div>
     </div>
 </div>
-

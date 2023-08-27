@@ -4,7 +4,7 @@
             <div class="container no_pad_xs">
                 <div class="ss-box1-right-all">
                     <div class="package_info">
-                        <div class="row">
+                        <div class="row" style="margin: 0px; padding: 5px">
                             <div class="col-md-4 no_pad_left">
                                 <div class="thumbnail">
                                     <img [src]="data[this.id].imagePath" alt="image">
@@ -20,7 +20,7 @@
                                 <div [innerHTML]="data[this.id].shotDescription" style="margin-bottom: 10px;">
                                 </div>
                                 <div class="row_btn">
-                                    <a class="btn btn_green" href="/register?id={{this.id}}">Đăng ký ngay</a>                                                                    
+                                    <a class="btn btn_green" (click)="gotoRegister($event, this.id)">Đăng ký ngay</a>                                                                    
                                 </div>
                             </div>
                             <div class="space_1"></div>

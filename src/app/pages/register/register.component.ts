@@ -188,7 +188,7 @@ export class RegisterComponent {
     ward: new FormControl('', [Validators.required]),
     address: new FormControl('', [Validators.required]),
     phoneNumber: new FormControl('', [Validators.required]),
-    introducer: new FormControl(''),
+    note: new FormControl(''),
   });
   
   // convenience getter for easy access to form fields
@@ -218,7 +218,7 @@ export class RegisterComponent {
       ward: this.FormData.value.ward,
       address: this.FormData.value.address,
       phoneNumber: this.FormData.value.phoneNumber,
-      introducer: this.FormData.value.introducer,
+      note: this.FormData.value.note,
       dataPackage: this.data[this.id].title,
       price: this.data[this.id].discountPrice ?? this.data[this.id].price,
     };

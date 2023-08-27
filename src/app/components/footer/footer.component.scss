@@ -5,25 +5,40 @@
     position: fixed;
     display: flex;
     flex-wrap: wrap-reverse;
-    flex-direction: row-reverse;
-    right: 15px;
-    bottom: 15px;
+    bottom: 2px;
+    left: 20px;
 }
 
 .contact-area {
-    width: 70px;
-    height:70px;
+    width: 60px;
+    height: 130px;
     position: absolute;
-    transform: scaleX(-1);
 }
-  
-.btn-contact,
-.btn-contact:focus {
-    padding: 13px;
-    border-radius: 23px;
+
+.btn-zalo-contact:hover,
+.btn-phone-contact:hover {
+    color: white;
+}
+
+.btn-phone-contact,
+.btn-zalo-contact,
+.btn-zalo-contact:focus,
+.btn-phone-contact:focus {
+    border-radius: 16px;
     background-color: #019aff;
     color: aliceblue;
     cursor: pointer;
+    box-shadow: rgba(10, 226, 255, 0.35) 0px 0px 3px 4px;
+}
+
+.btn-zalo-contact {
+    padding: 1px;
+}
+
+.btn-phone-contact {
+    margin-top: 10px;
+    padding: 11px;
+    transform: scaleX(-1);
 }
 
 .btn-advise {
@@ -32,4 +47,9 @@
     font-size: 16px;
     font-family: SanFranciscoDisplay-Light;
     border: none;
+}
+
+.row {
+    margin: 0px;
+    padding: 5px;
 }
